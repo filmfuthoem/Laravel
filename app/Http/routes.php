@@ -19,3 +19,17 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+// start learning
+Route::get('hello',function(){
+	return 'Hello Laravel';
+});
+
+// Route::get('welcome/hello','WelcomeController@hello');
+
+// pass paremeter
+// Route::get('welcome/page/{id}/{title?}','WelcomeController@page')
+// ->where(['id'=>'[0-9]+','title'=>'[a-zA-Z]+']);
+
+Route::controller('welcome','WelcomeController');
+Route::get('hello','HelloController@index');

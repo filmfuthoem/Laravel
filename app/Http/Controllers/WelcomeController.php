@@ -33,4 +33,24 @@ class WelcomeController extends Controller {
 		return view('welcome');
 	}
 
+	public function hello()
+	{
+		return 'WelcomeController Laravel';
+	}
+
+	public function page($id,$title=null){
+		return 'Welcome to Page '.$id.' '.$title;
+	}
+
+	public function getPage(){
+		return 'Welcome to Page by GET Method';
+	}
+
+	public function getBlog(){
+		return 'Welcome to Blog';
+	}
+
+	public function getContactUs(){
+		return 'Welcome to Contact Us';
+	}
 }
