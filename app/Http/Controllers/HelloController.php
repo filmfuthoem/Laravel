@@ -10,7 +10,8 @@ class HelloController extends Controller {
 	public function index(){
 		$title = '<u>PHP Programming</u>';
 		$subtitle = 'Welcome to Laravel 5';
-		return view('hello.index',['title'=>$title,'subtitle'=>$subtitle]);
+		$record = 5;
+		return view('hello.index',['title'=>$title,'subtitle'=>$subtitle,'record'=>$record]);
 	}
 
 }
