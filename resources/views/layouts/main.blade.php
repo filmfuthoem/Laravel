@@ -1,67 +1,53 @@
-<html>
-	<head>
-		<title>Laravel 5 - @yield('page_title')</title>
-		{!! HTML::style('bootstrap/css/bootstrap.min.css') !!}
-	</head>
-	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	            <span class="sr-only">Toggle navigation</span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button>
-	          <a class="navbar-brand" href="#">LARAVEL</a>
-	        </div>
-	        <div id="navbar" class="navbar-collapse collapse">
-	          <form class="navbar-form navbar-right">
-	            <div class="form-group">
-	              <input type="text" placeholder="Email" class="form-control">
-	            </div>
-	            <div class="form-group">
-	              <input type="password" placeholder="Password" class="form-control">
-	            </div>
-	            <button type="submit" class="btn btn-success">Sign in</button>
-	          </form>
-	        </div><!--/.navbar-collapse -->
-	      </div>
-	    </nav>
+<!Doctype html> 
+<html> 
+<head>  
+	<meta charset="utf-8">
+	<title>Page: @yield('site_title')</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equive="X-UA-Compatible" content="IE=edge"> 
+	{!! HTML::style('bootstrap/css/bootstrap.min.css') !!}	
+</head> 
+<body>
+	<div class="navbar navbar-default" role="navigation">     
+		<div class="container-fluid">         
+			<div class="navbar-header">             
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">             
+					<span class="sr-only">Toggle navigation</span>             
+					<span class="icon-bar"></span>             
+					<span class="icon-bar"></span>             
+					<span class="icon-bar"></span>             
+				</button> <a class="navbar-brand" href="{{ url('articles') }}">Home</a>
+			</div> 
+			<div class="navbar-collapse collapse">             
+				<ul class="nav navbar-nav">                 
+					<li class="active">                     
+						<a href="{{ url('pages/about') }}">About</a>                 
+					</li>                 
+					<li>                     
+					<a href="{{ url('pages/contact') }}">Contact</a>                 
+					</li>            
+				</ul>  
+   				<ul class="nav navbar-nav navbar-right>">       
+   					<li>       
+   						<a href="{{ url('articles/create') }}">New Article</a>        
+   					</li>
+   				</ul>         
+   			</div><!--/.nav-collapse -->     
+   		</div> 
+   	</div>  	
+	<!-- <ul>
+		<li><a href="{{ url('pages/contact') }}">Contact</a></li>
+		<li><a href="{{ url('pages/about') }}">About</a></li>
+	</ul> -->
 
-	    <div class="jumbotron">
-	    	<div class="container">
-			@yield('content')
-			</div>
-	    </div>
+	<div class="container">         
+		@yield('content') 
+	</div>  
 
-	    <div class="container">
-	      <!-- Example row of columns -->
-		    <div class="row">
-		        <div class="col-md-4">
-		          <h2>Heading</h2>
-		          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-		        </div>
-		        <div class="col-md-4">
-		          <h2>Heading</h2>
-		          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-		        </div>
-		        <div class="col-md-4">
-		          <h2>Heading</h2>
-		          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-		          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-		        </div>
-		    </div>
-      	    <hr>
-
-	      	<footer>
-	        <p>&copy; 2015 Company, Inc.</p>
-	      	</footer>
-	    </div> <!-- /container -->
-		
-		{!! HTML::script('js/jquery.min.js') !!}
-		{!! HTML::script('bootstrap/js/bootstrap.min.js') !!}
-	</body>
+	<div class="footer container-fluid">  
+		Copyright &copy; 2015 
+	</div> 
+	{!! HTML::script('js/jquery.min.js') !!}
+	{!! HTML::script('bootstrap/js/bootstrap.min.js') !!}
+</body> 
 </html>

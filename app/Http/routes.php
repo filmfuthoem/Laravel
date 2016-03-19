@@ -33,3 +33,9 @@ Route::get('hello',function(){
 
 Route::controller('welcome','WelcomeController');
 Route::get('hello','HelloController@index');
+Route::get('articles','ArticlesController@index');
+Route::get('categories','CategoriesController@index');
+Route::get('articles/{id?}','ArticlesController@show');
+Route::controller('pages','PagesController');
+
+Route::resource('articles','ArticlesController');
