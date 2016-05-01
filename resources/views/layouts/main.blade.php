@@ -6,9 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equive="X-UA-Compatible" content="IE=edge"> 
 	{!! HTML::style('bootstrap/css/bootstrap.min.css') !!}	
+	{!! HTML::style('custom/css/navbar-fixed-top.css') !!}	
 </head> 
 <body>
-	<div class="navbar navbar-default" role="navigation">     
+	<div class="navbar navbar-default " role="navigation">     
 		<div class="container-fluid">         
 			<div class="navbar-header">             
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">             
@@ -20,12 +21,9 @@
 			</div> 
 			<div class="navbar-collapse collapse">             
 				<ul class="nav navbar-nav">                 
-					<li class="active">                     
-						<a href="{{ url('pages/about') }}">About</a>                 
-					</li>                 
 					<li>                     
-					<a href="{{ url('pages/contact') }}">Contact</a>                 
-					</li>            
+						<a href="{{ url('pages/about') }}">About</a>                 
+					</li>           
 				</ul>  
    				<ul class="nav navbar-nav navbar-right>">       
    					<li>       
