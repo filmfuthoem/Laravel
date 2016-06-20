@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('page_title','Hello Page')
+@section('site_title','About Me')
 @section('content')
 	<h1>{!! $title !!}</h1>
 	<p>{{ $subtitle }}</p>
